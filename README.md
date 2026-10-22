@@ -1,0 +1,2 @@
+# emdash-plugin-shell
+

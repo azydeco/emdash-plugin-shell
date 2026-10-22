@@ -1,0 +1,8 @@
+packages:
+  - emdash-plugin-example
+  - emdash-site
+
+allowBuilds:
+  esbuild: true
+  workerd: true
+
