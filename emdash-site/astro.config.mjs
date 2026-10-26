@@ -18,6 +18,7 @@ export default defineConfig({
 			database: d1({ binding: "DB", session: "auto", coalesce: true }),
 			storage: r2({ binding: "MEDIA" }),
 			plugins: [examplePlugin({ logUpdates: true })],
+			sandboxed: [],
 			sandboxRunner: sandbox(),
 		}),
 	],
