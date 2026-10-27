@@ -22,6 +22,9 @@ export default defineConfig({
 				directory: "./uploads",
 				baseUrl: "/_emdash/api/media/file",
 			}),
+			plugins: [examplePlugin({ logUpdates: true })],
+			sandboxed: [],
+			sandboxRunner: "@emdash-cms/sandbox-workerd/sandbox",
 		}),
 	],
 	fonts: [
