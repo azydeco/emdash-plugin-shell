@@ -12,8 +12,12 @@ import Base from "../layouts/Base.astro";
 				The page you’re looking for doesn’t exist or may have moved.
 			</p>
 			<div class="not-found__actions">
-				<a href="/" class="btn">Go home</a>
-				<a href="/posts" class="btn btn--ghost">Browse posts</a>
+				<a href="/" class="btn">
+					Go home
+				</a>
+				<a href="/posts" class="btn btn--ghost">
+					Browse posts
+				</a>
 			</div>
 			<form
 				method="get"
@@ -22,7 +26,9 @@ import Base from "../layouts/Base.astro";
 				aria-label="Posts"
 				class="not-found__search"
 			>
-				<label for="not-found-query" class="sr-only">Search posts</label>
+				<label for="not-found-query" class="sr-only">
+					Search posts
+				</label>
 				<svg
 					class="not-found__search-icon"
 					viewBox="0 0 24 24"
@@ -32,9 +38,10 @@ import Base from "../layouts/Base.astro";
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					aria-hidden="true"
-					><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"
-					></path></svg
 				>
+					<circle cx="11" cy="11" r="7"></circle>
+					<path d="m20 20-3.5-3.5"></path>
+				</svg>
 				<input
 					id="not-found-query"
 					class="not-found__search-input"

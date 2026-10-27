@@ -59,7 +59,9 @@ const countLabel = nextCursor
 				aria-label="Posts"
 				class="search-form"
 			>
-				<label for="search-query" class="sr-only">Search posts</label>
+				<label for="search-query" class="sr-only">
+					Search posts
+				</label>
 				<div class="search-field">
 					<svg
 						class="search-field__icon"
@@ -70,9 +72,10 @@ const countLabel = nextCursor
 						stroke-linecap="round"
 						stroke-linejoin="round"
 						aria-hidden="true"
-						><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"
-						></path></svg
 					>
+						<circle cx="11" cy="11" r="7"></circle>
+						<path d="m20 20-3.5-3.5"></path>
+					</svg>
 					<input
 						id="search-query"
 						class="search-field__input"
@@ -82,33 +85,67 @@ const countLabel = nextCursor
 						placeholder="Search posts"
 						autofocus={!query}
 					/>
-					<button type="submit" class="btn search-field__submit">Search</button>
+					<button type="submit" class="btn search-field__submit">
+						Search
+					</button>
 				</div>
 			</form>
-			{
-				!query && (
-					<p class="search-hint">
-						Searches post titles and full text. Not sure where to start?{" "}
-						<a href="/posts">Browse all posts</a>.
-					</p>
-				)
-			}
+			{!query && (
+				<p class="search-hint">
+					Searches post titles and full text. Not sure where to start?{" "}
+					<a href="/posts">Browse all posts</a>.
+				</p>
+			)}
 		</div>
 	</header>
 
-	{
-		query && (
-			<section class="band section">
-				<div class="frame">
-					{rows.length > 0 ? (
-						<>
-							<div class="section-head">
-								<p class="search-summary">
-									<strong>{countLabel}</strong> for “{query}”
-								</p>
-								<a href="/posts" class="arrow-link">
-									All posts
+	{query && (
+		<section class="band section">
+			<div class="frame">
+				{rows.length > 0 ? (
+					<>
+						<div class="section-head">
+							<p class="search-summary">
+								<strong>{countLabel}</strong> for “{query}”
+							</p>
+							<a href="/posts" class="arrow-link">
+								All posts
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.75"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<path d="M5 12h14" />
+									<path d="m12 5 7 7-7 7" />
+								</svg>
+							</a>
+						</div>
+						<ol class="results" role="list">
+							{rows.map((row) => (
+								<li class="result">
+									<div class="result__body">
+										<h2 class="result__title">
+											<a href={row.path} class="result__link">
+												{row.titleHtml ? (
+													<Fragment set:html={row.titleHtml} />
+												) : (
+													row.title
+												)}
+											</a>
+										</h2>
+										{row.snippet && (
+											<p class="result__snippet" set:html={row.snippet} />
+										)}
+										<p class="result__path">
+											<span dir="ltr">{row.path}</span>
+										</p>
+									</div>
 									<svg
+										class="result__arrow"
 										viewBox="0 0 24 24"
 										fill="none"
 										stroke="currentColor"
@@ -120,63 +157,27 @@ const countLabel = nextCursor
 										<path d="M5 12h14" />
 										<path d="m12 5 7 7-7 7" />
 									</svg>
-								</a>
-							</div>
-							<ol class="results" role="list">
-								{rows.map((row) => (
-									<li class="result">
-										<div class="result__body">
-											<h2 class="result__title">
-												<a href={row.path} class="result__link">
-													{row.titleHtml ? (
-														<Fragment set:html={row.titleHtml} />
-													) : (
-														row.title
-													)}
-												</a>
-											</h2>
-											{row.snippet && (
-												<p class="result__snippet" set:html={row.snippet} />
-											)}
-											<p class="result__path">
-												<span dir="ltr">{row.path}</span>
-											</p>
-										</div>
-										<svg
-											class="result__arrow"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.75"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											aria-hidden="true"
-										>
-											<path d="M5 12h14" />
-											<path d="m12 5 7 7-7 7" />
-										</svg>
-									</li>
-								))}
-							</ol>
-						</>
-					) : (
-						<div class="empty-state">
-							<h2 class="empty-state__title">No results for “{query}”</h2>
-							<p class="empty-state__text">
-								Check the spelling, try fewer or different words, or browse
-								every post instead.
-							</p>
-							<div class="empty-state__actions">
-								<a href="/posts" class="btn btn--ghost">
-									Browse all posts
-								</a>
-							</div>
+								</li>
+							))}
+						</ol>
+					</>
+				) : (
+					<div class="empty-state">
+						<h2 class="empty-state__title">No results for “{query}”</h2>
+						<p class="empty-state__text">
+							Check the spelling, try fewer or different words, or browse every
+							post instead.
+						</p>
+						<div class="empty-state__actions">
+							<a href="/posts" class="btn btn--ghost">
+								Browse all posts
+							</a>
 						</div>
-					)}
-				</div>
-			</section>
-		)
-	}
+					</div>
+				)}
+			</div>
+		</section>
+	)}
 </Base>
 
 <style>

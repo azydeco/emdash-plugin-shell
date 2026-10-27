@@ -92,80 +92,78 @@ const gridPostsWithTags = gridPosts.map((post) => ({
 		</div>
 	</header>
 
-	{
-		posts.length === 0 ? (
-			<section class="band section">
-				<div class="frame">
-					<div class="empty-state">
-						<h2 class="empty-state__title">No posts yet</h2>
-						<p class="empty-state__text">
-							Create your first post in the admin panel.
-						</p>
-						<div class="empty-state__actions">
-							<a href="/_emdash/admin/content/posts/new" class="btn">
-								Create a post
-							</a>
-						</div>
+	{posts.length === 0 ? (
+		<section class="band section">
+			<div class="frame">
+				<div class="empty-state">
+					<h2 class="empty-state__title">No posts yet</h2>
+					<p class="empty-state__text">
+						Create your first post in the admin panel.
+					</p>
+					<div class="empty-state__actions">
+						<a href="/_emdash/admin/content/posts/new" class="btn">
+							Create a post
+						</a>
 					</div>
 				</div>
-			</section>
-		) : (
-			<>
-				{featuredPost && (
-					<section class="band section">
-						<div class="frame">
-							<PostCard
-								post={featuredPost}
-								tags={featuredTags}
-								variant="feature"
-								headingLevel={2}
-								priority
-							/>
-						</div>
-					</section>
-				)}
+			</div>
+		</section>
+	) : (
+		<>
+			{featuredPost && (
+				<section class="band section">
+					<div class="frame">
+						<PostCard
+							post={featuredPost}
+							tags={featuredTags}
+							variant="feature"
+							headingLevel={2}
+							priority
+						/>
+					</div>
+				</section>
+			)}
 
-				{gridPostsWithTags.length > 0 && (
-					<section class="band section" aria-labelledby="latest-posts">
-						<div class="frame">
-							<div class="section-head">
-								<h2 id="latest-posts" class="section-head__title">
-									Latest posts
-								</h2>
-								{hasMorePosts && (
-									<a href="/posts" class="arrow-link">
-										View all<span class="sr-only"> posts</span>
-										<svg
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.75"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											aria-hidden="true"
-										>
-											<path d="M5 12h14" />
-											<path d="m12 5 7 7-7 7" />
-										</svg>
-									</a>
-								)}
-							</div>
-							<div class="post-grid">
-								{gridPostsWithTags.map(({ post, tags }) => (
-									<PostCard
-										post={post}
-										tags={tags}
-										variant="card"
-										headingLevel={3}
-									/>
-								))}
-							</div>
+			{gridPostsWithTags.length > 0 && (
+				<section class="band section" aria-labelledby="latest-posts">
+					<div class="frame">
+						<div class="section-head">
+							<h2 id="latest-posts" class="section-head__title">
+								Latest posts
+							</h2>
+							{hasMorePosts && (
+								<a href="/posts" class="arrow-link">
+									View all<span class="sr-only"> posts</span>
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.75"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										aria-hidden="true"
+									>
+										<path d="M5 12h14" />
+										<path d="m12 5 7 7-7 7" />
+									</svg>
+								</a>
+							)}
 						</div>
-					</section>
-				)}
-			</>
-		)
-	}
+						<div class="post-grid">
+							{gridPostsWithTags.map(({ post, tags }) => (
+								<PostCard
+									post={post}
+									tags={tags}
+									variant="card"
+									headingLevel={3}
+								/>
+							))}
+						</div>
+					</div>
+				</section>
+			)}
+		</>
+	)}
 </Base>
 
 <style>

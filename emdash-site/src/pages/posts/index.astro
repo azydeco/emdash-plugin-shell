@@ -45,42 +45,40 @@ const postsWithTags = posts.map((post) => ({
 
 	<section class="band section archive-band">
 		<div class="frame">
-			{
-				posts.length === 0 ? (
-					<div class="empty-state">
-						<h2 class="empty-state__title">
-							{cursor ? "No more posts" : "No posts yet"}
-						</h2>
-						<p class="empty-state__text">
-							{cursor
-								? "You have reached the end of the archive."
-								: "Published posts will show up here."}
-						</p>
-						{cursor && (
-							<div class="empty-state__actions">
-								<a href="/posts" class="btn btn--ghost">
-									First page
-								</a>
-							</div>
-						)}
-					</div>
-				) : (
-					<>
-						<ol class="archive__list">
-							{postsWithTags.map(({ post, tags }) => (
-								<li>
-									<PostCard post={post} tags={tags} variant="row" />
-								</li>
-							))}
-						</ol>
-						<Pagination
-							basePath="/posts"
-							cursor={cursor}
-							nextCursor={nextCursor}
-						/>
-					</>
-				)
-			}
+			{posts.length === 0 ? (
+				<div class="empty-state">
+					<h2 class="empty-state__title">
+						{cursor ? "No more posts" : "No posts yet"}
+					</h2>
+					<p class="empty-state__text">
+						{cursor
+							? "You have reached the end of the archive."
+							: "Published posts will show up here."}
+					</p>
+					{cursor && (
+						<div class="empty-state__actions">
+							<a href="/posts" class="btn btn--ghost">
+								First page
+							</a>
+						</div>
+					)}
+				</div>
+			) : (
+				<>
+					<ol class="archive__list">
+						{postsWithTags.map(({ post, tags }) => (
+							<li>
+								<PostCard post={post} tags={tags} variant="row" />
+							</li>
+						))}
+					</ol>
+					<Pagination
+						basePath="/posts"
+						cursor={cursor}
+						nextCursor={nextCursor}
+					/>
+				</>
+			)}
 		</div>
 	</section>
 </Base>

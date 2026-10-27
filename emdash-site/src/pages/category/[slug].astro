@@ -80,44 +80,42 @@ const filteredPosts = posts.map((post) => ({
 
 	<section class="band section">
 		<div class="frame">
-			{
-				filteredPosts.length > 0 ? (
-					<>
-						<div class="post-grid">
-							{filteredPosts.map(({ post, tags }) => (
-								<PostCard
-									post={post}
-									tags={tags.map((t) => ({ slug: t.slug, label: t.label }))}
-								/>
-							))}
-						</div>
-						<Pagination
-							basePath={`/category/${term.slug}`}
-							cursor={cursor}
-							nextCursor={nextCursor}
-						/>
-					</>
-				) : (
-					<div class="empty-state">
-						<h2 class="empty-state__title">
-							{cursor ? "No more posts" : "Nothing here yet"}
-						</h2>
-						<p class="empty-state__text">
-							{cursor
-								? "This page is past the last post."
-								: `No posts have been filed under ${term.label} so far.`}
-						</p>
-						<div class="empty-state__actions">
-							<a
-								href={cursor ? `/category/${term.slug}` : "/posts"}
-								class="btn btn--ghost"
-							>
-								{cursor ? "Back to the first page" : "Browse all posts"}
-							</a>
-						</div>
+			{filteredPosts.length > 0 ? (
+				<>
+					<div class="post-grid">
+						{filteredPosts.map(({ post, tags }) => (
+							<PostCard
+								post={post}
+								tags={tags.map((t) => ({ slug: t.slug, label: t.label }))}
+							/>
+						))}
 					</div>
-				)
-			}
+					<Pagination
+						basePath={`/category/${term.slug}`}
+						cursor={cursor}
+						nextCursor={nextCursor}
+					/>
+				</>
+			) : (
+				<div class="empty-state">
+					<h2 class="empty-state__title">
+						{cursor ? "No more posts" : "Nothing here yet"}
+					</h2>
+					<p class="empty-state__text">
+						{cursor
+							? "This page is past the last post."
+							: `No posts have been filed under ${term.label} so far.`}
+					</p>
+					<div class="empty-state__actions">
+						<a
+							href={cursor ? `/category/${term.slug}` : "/posts"}
+							class="btn btn--ghost"
+						>
+							{cursor ? "Back to the first page" : "Browse all posts"}
+						</a>
+					</div>
+				</div>
+			)}
 		</div>
 	</section>
 </Base>
