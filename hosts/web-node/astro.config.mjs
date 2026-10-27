@@ -3,6 +3,7 @@ import react from "@astrojs/react";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash, { local } from "emdash/astro";
 import { sqlite } from "emdash/db";
+import { examplePlugin } from "@example/emdash-plugin-example";
 
 export default defineConfig({
 	output: "server",
