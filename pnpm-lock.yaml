@@ -91,6 +91,40 @@ importers:
         specifier: ^4.125.0
         version: 4.152.0(@cloudflare/workers-types@5.20261026.1)(@types/node@26.6.5)
 
+  hosts/web-cloudflare:
+    dependencies:
+      '@astrojs/cloudflare':
+        specifier: ^14.3.1
+        version: 14.4.2(@types/node@26.6.5)(astro@7.4.2(@types/node@26.6.5)(esbuild@0.28.2)(yaml@2.9.1))(esbuild@0.28.2)(workerd@1.20261019.1)(wrangler@4.152.0(@cloudflare/workers-types@5.20261026.1)(@types/node@26.6.5))(yaml@2.9.1)
+      '@astrojs/react':
+        specifier: ^7.0.0
+        version: 7.1.1(@types/node@26.6.5)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(yaml@2.9.1)
+      '@emdash-cms/cloudflare':
+        specifier: ^1.3.0
+        version: 1.3.1(1926dca8cd26d53e25c08991a2cf482e)
+      astro:
+        specifier: ^7.3.2
+        version: 7.4.2(@types/node@26.6.5)(esbuild@0.28.2)(yaml@2.9.1)
+      emdash:
+        specifier: ^1.3.0
+        version: 1.3.1(@astrojs/react@7.1.1(@types/node@26.6.5)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(yaml@2.9.1))(@atcute/cbor@2.3.8(@atcute/cid@2.5.0))(@atcute/cid@2.5.0)(@atcute/identity@2.0.2(@atcute/lexicons@2.1.1)(typescript@6.0.3))(@date-fns/tz@1.5.0)(@floating-ui/dom@1.8.0)(@tiptap/extensions@3.32.0(@tiptap/core@3.32.0(@tiptap/pm@3.32.0))(@tiptap/pm@3.32.0))(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(astro@7.4.2(@types/node@26.6.5)(esbuild@0.28.2)(yaml@2.9.1))(date-fns@4.4.0)(echarts@6.1.0)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(supports-color@10.2.2)(typescript@6.0.3)
+      react:
+        specifier: 19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.10
+        version: 0.9.12(@emnapi/runtime@1.11.3)(prettier-plugin-astro@1.1.2(prettier@3.9.9))(prettier@3.9.9)(typescript@6.0.3)
+      '@cloudflare/workers-types':
+        specifier: ^5.20260820.1
+        version: 5.20261026.1
+      wrangler:
+        specifier: ^4.125.0
+        version: 4.152.0(@cloudflare/workers-types@5.20261026.1)(@types/node@26.6.5)
+
 packages:
 
   '@astrojs/astro2tsx@0.1.3':
@@ -4327,6 +4361,18 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
+  '@astrojs/check@0.9.12(@emnapi/runtime@1.11.3)(prettier-plugin-astro@1.1.2(prettier@3.9.9))(prettier@3.9.9)(typescript@6.0.3)':
+    dependencies:
+      '@astrojs/language-server': 2.17.3(@emnapi/runtime@1.11.3)(prettier-plugin-astro@1.1.2(prettier@3.9.9))(prettier@3.9.9)(typescript@6.0.3)
+      chokidar: 5.0.0
+      kleur: 4.1.5
+      typescript: 6.0.3
+      yargs: 18.2.0
+    transitivePeerDependencies:
+      - '@emnapi/runtime'
+      - prettier
+      - prettier-plugin-astro
+
   '@astrojs/cloudflare@14.4.2(@types/node@26.6.5)(astro@7.4.2(@types/node@26.6.5)(esbuild@0.28.2)(yaml@2.9.1))(esbuild@0.28.2)(workerd@1.20261019.1)(wrangler@4.152.0(@cloudflare/workers-types@5.20261026.1)(@types/node@26.6.5))(yaml@2.9.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.13.0
@@ -4433,6 +4479,32 @@ snapshots:
       volar-service-typescript: 0.0.71(@volar/language-service@2.4.30(typescript@5.9.3))(typescript@5.9.3)
       volar-service-typescript-twoslash-queries: 0.0.71(@volar/language-service@2.4.30(typescript@5.9.3))(typescript@5.9.3)
       volar-service-yaml: 0.0.71(@volar/language-service@2.4.30(typescript@5.9.3))
+      vscode-html-languageservice: 5.6.2
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      prettier: 3.9.9
+      prettier-plugin-astro: 1.1.2(prettier@3.9.9)
+    transitivePeerDependencies:
+      - '@emnapi/runtime'
+      - typescript
+
+  '@astrojs/language-server@2.17.3(@emnapi/runtime@1.11.3)(prettier-plugin-astro@1.1.2(prettier@3.9.9))(prettier@3.9.9)(typescript@6.0.3)':
+    dependencies:
+      '@astrojs/astro2tsx': 0.1.3(@emnapi/runtime@1.11.3)
+      '@astrojs/yaml2ts': 0.2.4
+      '@volar/kit': 2.4.30(typescript@6.0.3)
+      '@volar/language-core': 2.4.30
+      '@volar/language-server': 2.4.30(typescript@6.0.3)
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+      muggle-string: 0.4.1
+      tinyglobby: 0.2.17
+      volar-service-css: 0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))
+      volar-service-emmet: 0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))
+      volar-service-html: 0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))
+      volar-service-prettier: 0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))(prettier@3.9.9)
+      volar-service-typescript: 0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))(typescript@6.0.3)
+      volar-service-typescript-twoslash-queries: 0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))(typescript@6.0.3)
+      volar-service-yaml: 0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))
       vscode-html-languageservice: 5.6.2
       vscode-uri: 3.2.0
     optionalDependencies:
@@ -6588,6 +6660,15 @@ snapshots:
       vscode-languageserver-textdocument: 1.0.16
       vscode-uri: 3.2.0
 
+  '@volar/kit@2.4.30(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+      '@volar/typescript': 2.4.30(typescript@6.0.3)
+      typesafe-path: 0.2.2
+      typescript: 6.0.3
+      vscode-languageserver-textdocument: 1.0.16
+      vscode-uri: 3.2.0
+
   '@volar/language-core@2.4.30':
     dependencies:
       '@volar/source-map': 2.4.30
@@ -6606,6 +6687,20 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
+  '@volar/language-server@2.4.30(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-core': 2.4.30
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+      '@volar/typescript': 2.4.30(typescript@6.0.3)
+      path-browserify: 1.0.1
+      request-light: 0.7.0
+      vscode-languageserver: 9.0.1
+      vscode-languageserver-protocol: 3.18.5
+      vscode-languageserver-textdocument: 1.0.16
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 6.0.3
+
   '@volar/language-service@2.4.30(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.30
@@ -6614,6 +6709,15 @@ snapshots:
       vscode-uri: 3.2.0
     optionalDependencies:
       typescript: 5.9.3
+
+  '@volar/language-service@2.4.30(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-core': 2.4.30
+      vscode-languageserver-protocol: 3.18.5
+      vscode-languageserver-textdocument: 1.0.16
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 6.0.3
 
   '@volar/source-map@2.4.30': {}
 
@@ -6625,6 +6729,15 @@ snapshots:
       vscode-uri: 3.2.0
     optionalDependencies:
       typescript: 5.9.3
+
+  '@volar/typescript@2.4.30(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-core': 2.4.30
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+      path-browserify: 1.0.1
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 6.0.3
 
   '@vscode/emmet-helper@2.11.0':
     dependencies:
@@ -8682,6 +8795,14 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.30(typescript@5.9.3)
 
+  volar-service-css@0.0.71(@volar/language-service@2.4.30(typescript@6.0.3)):
+    dependencies:
+      vscode-css-languageservice: 6.3.10
+      vscode-languageserver-textdocument: 1.0.16
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+
   volar-service-emmet@0.0.71(@volar/language-service@2.4.30(typescript@5.9.3)):
     dependencies:
       '@emmetio/css-parser': 0.4.1
@@ -8691,6 +8812,15 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.30(typescript@5.9.3)
 
+  volar-service-emmet@0.0.71(@volar/language-service@2.4.30(typescript@6.0.3)):
+    dependencies:
+      '@emmetio/css-parser': 0.4.1
+      '@emmetio/html-matcher': 1.3.0
+      '@vscode/emmet-helper': 2.11.0
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+
   volar-service-html@0.0.71(@volar/language-service@2.4.30(typescript@5.9.3)):
     dependencies:
       vscode-html-languageservice: 5.6.2
@@ -8699,11 +8829,26 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.30(typescript@5.9.3)
 
+  volar-service-html@0.0.71(@volar/language-service@2.4.30(typescript@6.0.3)):
+    dependencies:
+      vscode-html-languageservice: 5.6.2
+      vscode-languageserver-textdocument: 1.0.16
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+
   volar-service-prettier@0.0.71(@volar/language-service@2.4.30(typescript@5.9.3))(prettier@3.9.9):
     dependencies:
       vscode-uri: 3.2.0
     optionalDependencies:
       '@volar/language-service': 2.4.30(typescript@5.9.3)
+      prettier: 3.9.9
+
+  volar-service-prettier@0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))(prettier@3.9.9):
+    dependencies:
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
       prettier: 3.9.9
 
   volar-service-typescript-twoslash-queries@0.0.71(@volar/language-service@2.4.30(typescript@5.9.3))(typescript@5.9.3):
@@ -8712,6 +8857,13 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.30(typescript@5.9.3)
       typescript: 5.9.3
+
+  volar-service-typescript-twoslash-queries@0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))(typescript@6.0.3):
+    dependencies:
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+      typescript: 6.0.3
 
   volar-service-typescript@0.0.71(@volar/language-service@2.4.30(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
@@ -8725,12 +8877,31 @@ snapshots:
       '@volar/language-service': 2.4.30(typescript@5.9.3)
       typescript: 5.9.3
 
+  volar-service-typescript@0.0.71(@volar/language-service@2.4.30(typescript@6.0.3))(typescript@6.0.3):
+    dependencies:
+      path-browserify: 1.0.1
+      semver: 7.8.5
+      typescript-auto-import-cache: 0.3.6
+      vscode-languageserver-textdocument: 1.0.16
+      vscode-nls: 5.2.0
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
+      typescript: 6.0.3
+
   volar-service-yaml@0.0.71(@volar/language-service@2.4.30(typescript@5.9.3)):
     dependencies:
       vscode-uri: 3.2.0
       yaml-language-server: 1.23.0
     optionalDependencies:
       '@volar/language-service': 2.4.30(typescript@5.9.3)
+
+  volar-service-yaml@0.0.71(@volar/language-service@2.4.30(typescript@6.0.3)):
+    dependencies:
+      vscode-uri: 3.2.0
+      yaml-language-server: 1.23.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.30(typescript@6.0.3)
 
   vscode-css-languageservice@6.3.10:
     dependencies:

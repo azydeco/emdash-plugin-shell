@@ -1,6 +1,7 @@
 packages:
   - emdash-plugin-example
   - emdash-site
+  - hosts/*
 
 allowBuilds:
   esbuild: true
