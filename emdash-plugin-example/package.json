@@ -1,26 +1,29 @@
 {
-    "name": "@example/emdash-plugin-example",
-    "version": "0.1.0",
-    "type": "module",
-    "main": "./dist/index.mjs",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.mts",
-            "import": "./dist/index.mjs"
-        }
-    },
-    "files": ["dist"],
-    "scripts": {
-        "build": "tsdown src/index.ts --format esm --dts --clean",
-        "dev": "tsdown src/index.ts --format esm --dts --watch",
-        "typecheck": "tsc --noEmit"
-    },
-    "peerDependencies": {
-        "emdash": "*"
-    },
-    "devDependencies": {
-        "emdash": "*",
-        "tsdown": "^0.20.0",
-        "typescript": "^5.9.0"
-    }
+	"name": "@example/emdash-plugin-example",
+	"version": "0.1.0",
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"main": "./dist/index.mjs",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"scripts": {
+		"build": "tsdown src/index.ts --format esm --dts --clean",
+		"dev": "tsdown src/index.ts --format esm --dts --watch",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@emdash-cms/plugin-cli": "catalog:",
+		"emdash": "catalog:",
+		"tsdown": "^0.20.0",
+		"typescript": "^5.9.0"
+	},
+	"peerDependencies": {
+		"emdash": "catalog:"
+	}
 }
