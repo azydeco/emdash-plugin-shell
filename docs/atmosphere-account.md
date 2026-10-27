@@ -6,7 +6,7 @@
 - [AT Protocol handles](https://atproto.com/specs/handle): how a domain handle is verified with a DNS `TXT` record or `/.well-known/atproto-did`.
 - [AT Protocol DIDs](https://atproto.com/specs/did) and the [PLC directory](https://web.plc.directory): the permanent account identifier that `publisher` pins.
 - [Bluesky: custom domain handles](https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial): a step-by-step guide to switching a Bluesky handle to your own domain.
-- [publishing.md](publishing.md): the Emdash plugin's publishing checklist, which starts from this setup.
+- [publishing-sandboxed.md](publishing-sandboxed.md): A Sandboxed Emdash plugin's publishing checklist, which starts from this setup.
 
 ## Setting up the Atmosphere account
 

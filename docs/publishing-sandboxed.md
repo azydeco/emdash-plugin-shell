@@ -2,7 +2,7 @@
 
 ## Release checklist
 
-Work through this list for every release of the Listing plugin. Each step is explained in more detail below.
+Work through this list for every release of a sandboxed plugin. Each step is explained in more detail below.
 
 - [ ] The Atmosphere account exists, and `publisher` in `emdash-plugin.jsonc` is its DID (see [One-time setup](#one-time-setup)).
 - [ ] The release changes are merged to `main`, and your local `main` is checked out, clean and up to date with `origin`.
