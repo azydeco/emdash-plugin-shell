@@ -1,8 +1,9 @@
 # emdash-plugin-shell
 
-A pnpm workspace containing two packages:
+A pnpm workspace containing three packages:
 
-- **[`emdash-site`](emdash-site/README.md)** — The Emdash template site that is run locally for testing the plugin.
+- **[`hosts/web-cloudflare`](hosts/web-cloudflare/README.md)** — The Emdash template site that is run locally for testing the plugin.
+- **[`hosts/web-node`](hosts/web-node/README.md)** — The same Emdash template site on the Node adapter.
 - **[`emdash-plugin-example`](emdash-plugin-example)** — @example/emdash-plugin-example, a native emdash plugin.
 
 ## Requirements
@@ -34,7 +35,7 @@ On the sidebar find and open the Plugins tab, or go to <http://localhost:4321/_e
 
 | Command       | Does                                                                          |
 | ------------- | ----------------------------------------------------------------------------- |
-| `pnpm dev`    | Starts the package emdash-site's dev server on locahost.                      |
+| `pnpm dev`    | Starts the packages web-cloudflare and web-node's dev servers on locahost.    |
 | `pnpm build`  | Builds each workspace package that has a `build` script in its package.json.  |
 | `pnpm test`   | Runs test scripts in each workspace package that has them.                    |
 | `pnpm format` | Formats the workspace with oxfmt and prettier.                                |
