@@ -22,7 +22,6 @@
 	},
 	"scripts": {
 		"build": "tsdown src/index.ts --format esm --dts --clean",
-		"dev": "tsdown src/index.ts --format esm --dts --watch",
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
