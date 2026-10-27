@@ -1,6 +1,5 @@
 packages:
   - emdash-plugin-example
-  - emdash-site
   - hosts/*
 
 allowBuilds:
