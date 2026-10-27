@@ -12,6 +12,9 @@ catalogs:
     '@emdash-cms/plugin-cli':
       specifier: 0.13.4
       version: 0.13.4
+    astro:
+      specifier: ^7.4.2
+      version: 7.4.2
     emdash:
       specifier: 1.3.1
       version: 1.3.1
@@ -66,7 +69,7 @@ importers:
         specifier: workspace:*
         version: link:../emdash-plugin-example
       astro:
-        specifier: ^7.3.2
+        specifier: 'catalog:'
         version: 7.4.2(@types/node@26.6.5)(esbuild@0.28.2)(yaml@2.9.1)
       emdash:
         specifier: 'catalog:'
