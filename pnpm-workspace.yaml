@@ -1,5 +1,5 @@
 packages:
-  - emdash-plugin-example
+  - packages/*
   - hosts/*
 
 allowBuilds:
