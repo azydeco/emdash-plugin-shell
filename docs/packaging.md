@@ -30,7 +30,7 @@ pnpm -C packages/emdash-plugin-example publish
 
 ## Public repository
 
-The plugin is developed under `emdash-plugin-example` in the [azydeco/emdash-plugin-shell](https://github.com/azydeco/emdash-plugin-shell) monorepo and published to npm from that directory with `pnpm publish`. The `repository.directory` field in `package.json` points npm's UI at the subfolder. There is no separate mirror repository and no CI publish workflow, so publishing is a manual step that a maintainer runs.
+The native plugin is developed under `packages/emdash-plugin-example` in the [azydeco/emdash-plugin-shell](https://github.com/azydeco/emdash-plugin-shell) monorepo and published to npm from that directory with `pnpm publish`. The `repository.directory` field in `package.json` points npm's UI at the subfolder. There is no separate mirror repository and no CI publish workflow, so publishing is a manual step that a maintainer runs.
 
 ## Packaging and publishing a release
 

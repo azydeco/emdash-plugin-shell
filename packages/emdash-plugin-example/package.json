@@ -4,7 +4,7 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/azydeco/emdash-plugin-shell.git",
-		"directory": "emdash-plugin-example"
+		"directory": "packages/emdash-plugin-example"
 	},
 	"files": [
 		"src"
