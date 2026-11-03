@@ -7,7 +7,6 @@ A pnpm workspace containing four packages:
 - **[`packages/emdash-plugin-native-example`](packages/emdash-plugin-native-example/README.md)** — @example/emdash-plugin-example, a native emdash plugin.
 - **[`packages/emdash-plugin-sandboxed-example`](packages/emdash-plugin-sandboxed-example/README.md)** — @example/emdash-plugin-example-listing, a sandboxed emdash plugin.
 
-
 ## Requirements
 
 - **pnpm** - <https://pnpm.io/installation>

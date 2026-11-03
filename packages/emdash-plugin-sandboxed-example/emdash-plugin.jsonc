@@ -25,10 +25,12 @@
 		"artifacts": {},
 	},
 	"admin": {
-		"pages": [{
+		"pages": [
+			{
 				"path": "/settings",
 				"label": "Sandboxed Example",
-				"icon": "image"
-			}]
-	}
+				"icon": "image",
+			},
+		],
+	},
 }

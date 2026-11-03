@@ -12,6 +12,14 @@ The package is added as a dependency in hosts/web-cloudflare from the workspace.
 	},
 ```
 
+This works because the packages entry in pnpm-workspace.yaml at the root of the project.
+
+```yaml
+packages:
+  - packages/*
+  - hosts/*
+```
+
 ## Configure Astro
 
 Register it in `astro.config.mjs`, in `sandboxed: []`:
@@ -27,3 +35,33 @@ export default defineConfig({
 	],
 });
 ```
+
+## Modifying the example sandboxed plugin
+
+The emdash-plugin.jsonc file is the manifest that defines the sandboxed plugins slug, name, description, capabilities and admin pages and determines how it appears on the registry once it is published.
+
+| emdash-plugin.jsonc field         | Registry                |
+| --------------------------------- | ----------------------- |
+| `name` and `description`          | Name, tagline and About |
+| `listing/description.md`          | Description section     |
+| `listing/installation.md`         | Installation section    |
+| `icon.png` (256×256 PNG)          | Icon                    |
+| `release.artifacts.screenshots`   | Screenshots             |
+| `capabilities` and `allowedHosts` | Permissions             |
+
+The pages are listed on the Emdash admin UI sidebar and more can be added in the same plugin.
+
+```json
+	"admin": {
+		"pages": [
+			{
+				"path": "/settings",
+				"label": "Sandboxed Example",
+				"icon": "image",
+			},
+		],
+	},
+
+```
+
+The example in `src/plugin.ts` contains an exported SandboxedPlugin object with a handler that returns block kit objects when the page is loaded. All of your code can be written to this file or imported from other files in the package for readability.
