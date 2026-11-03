@@ -7,8 +7,6 @@
 		"directory": "emdash-plugin-example"
 	},
 	"files": [
-		"dist",
-		"emdash-plugin.jsonc",
 		"src"
 	],
 	"type": "module",

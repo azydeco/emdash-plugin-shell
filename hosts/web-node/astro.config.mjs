@@ -24,7 +24,7 @@ export default defineConfig({
 				baseUrl: "/_emdash/api/media/file",
 			}),
 			plugins: [examplePlugin({ logUpdates: true })],
-			sandboxed: [sandboxedPlugin()],
+			sandboxed: [sandboxedPlugin],
 			sandboxRunner: "@emdash-cms/sandbox-workerd/sandbox",
 		}),
 	],
