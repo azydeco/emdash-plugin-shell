@@ -21,6 +21,14 @@ pnpm build
 
 Install the project's dependencies then run the build script, which builds the test sites and builds the plugins to the dist folder.
 
+## Choosing the plugin format
+
+Before you work on a plugin you will have to decide the plugins format, either sandboxed or native. Examples for both are given in this repository.
+
+Native plugins are able to do things that sandboxed plugins cannot, such as render markup on the public site, use React components in the admin UI (the Media Library picker), and set a response status and headers. They can't be listed in the plugin registry and can only be distributed by packaging and publishing to npm. The release checklist and instructions on how to publish are in [docs/packaging.md](docs/packaging.md).
+
+Sandboxed plugins are able to be published to the registry and installed from the Emdash admin UI. The Admin UI is limited to using block kit for layouts and cannot inject html, styles and scripts into pages. HTTP requests can be made if network access is declared in the emdash-plugin.jsonc file. Instructions for publishing a sandboxed plugin to the registry are in [docs/publishing-sandboxed.md](docs/publishing-sandboxed.md).
+
 ## Testing locally
 
 ```sh
