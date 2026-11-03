@@ -19,6 +19,7 @@
     "@astrojs/react": "^7.0.0",
 		"@emdash-cms/cloudflare": "catalog:",
 		"@example/emdash-plugin-example": "workspace:*",
+		"@example/emdash-plugin-example-listing": "workspace:*",
     "astro": "catalog:",
     "emdash": "catalog:",
     "react": "19.2.4",
