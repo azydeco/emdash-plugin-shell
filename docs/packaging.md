@@ -18,14 +18,14 @@ Work through this list for every release. Each step is explained in more detail 
 Unless a step says otherwise, **run every command in this guide from the plugin package directory**, not from the repo root:
 
 ```bash
-cd emdash-plugin-example   # starting from the repo root
+cd packages/emdash-plugin-example   # starting from the repo root
 ```
   
-`pnpm pack` and `pnpm publish` act on the package in the current directory. From the repo root, they would pack the private workspace root (`emdash-plugin-examples`) instead of the plugin. If you'd rather stay in the repo root, give each command the package directory with `-C`:
+`pnpm pack` and `pnpm publish` act on the package in the current directory. From the repo root, they would pack the private workspace root (`emdash-plugin-shell`) instead of the plugin. If you'd rather stay in the repo root, give each command the package directory with `-C`:
 
 ```bash
-pnpm -C emdash-plugin-example pack --dry-run
-pnpm -C emdash-plugin-example publish
+pnpm -C packages/emdash-plugin-example pack --dry-run
+pnpm -C packages/emdash-plugin-example publish
 ```
 
 ## Public repository
@@ -83,7 +83,7 @@ Publish from an up-to-date `main` after the release PR is merged. `--no-git-chec
 
 ### Publish
 
-Run this from `emdash-plugin-example`:
+Run this from `packages/emdash-plugin-example`:
 
 ```bash
 pnpm whoami              # confirms you're logged in to npm
