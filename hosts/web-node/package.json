@@ -18,8 +18,8 @@
 		"@example/emdash-plugin-example-listing": "workspace:*",
 		"astro": "catalog:",
 		"emdash": "catalog:",
-		"react": "19.2.4",
-		"react-dom": "19.2.4"
+		"react": "catalog:",
+		"react-dom": "catalog:"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.10"
