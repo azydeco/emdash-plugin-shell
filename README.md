@@ -4,8 +4,8 @@ A pnpm workspace containing four packages:
 
 - **[`hosts/web-cloudflare`](hosts/web-cloudflare/README.md)** — The Emdash template site that is run locally for testing the plugin.
 - **[`hosts/web-node`](hosts/web-node/README.md)** — The same Emdash template site on the Node adapter.
-- **[`emdash-plugin-example`](packages/emdash-plugin-example/README.md)** — @example/emdash-plugin-example, a native emdash plugin.
-- **[`emdash-plugin-sandboxed-example`](packages/emdash-plugin-sandboxed-example/README.md)** — @example/emdash-plugin-example-listing, a sandboxed emdash plugin.
+- **[`packages/emdash-plugin-native-example`](packages/emdash-plugin-native-example/README.md)** — @example/emdash-plugin-example, a native emdash plugin.
+- **[`packages/emdash-plugin-sandboxed-example`](packages/emdash-plugin-sandboxed-example/README.md)** — @example/emdash-plugin-example-listing, a sandboxed emdash plugin.
 
 
 ## Requirements
@@ -19,7 +19,7 @@ pnpm i
 pnpm build
 ```
 
-Install the project's dependencies then run the build script, which builds the site and builds the plugin to the dist folder.
+Install the project's dependencies then run the build script, which builds the test sites and builds the plugins to the dist folder.
 
 ## Testing locally
 
