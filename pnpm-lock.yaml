@@ -102,6 +102,9 @@ importers:
       '@example/emdash-plugin-example':
         specifier: workspace:*
         version: link:../../packages/emdash-plugin-example
+      '@example/emdash-plugin-example-listing':
+        specifier: workspace:*
+        version: link:../../packages/emdash-plugin-sandboxed-example
       astro:
         specifier: 'catalog:'
         version: 7.4.2(@types/node@26.6.5)(esbuild@0.28.2)(yaml@2.9.1)
