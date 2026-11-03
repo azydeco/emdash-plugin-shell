@@ -1,10 +1,12 @@
 # emdash-plugin-shell
 
-A pnpm workspace containing three packages:
+A pnpm workspace containing four packages:
 
 - **[`hosts/web-cloudflare`](hosts/web-cloudflare/README.md)** — The Emdash template site that is run locally for testing the plugin.
 - **[`hosts/web-node`](hosts/web-node/README.md)** — The same Emdash template site on the Node adapter.
-- **[`emdash-plugin-example`](packages/emdash-plugin-example)** — @example/emdash-plugin-example, a native emdash plugin.
+- **[`emdash-plugin-example`](packages/emdash-plugin-example/README.md)** — @example/emdash-plugin-example, a native emdash plugin.
+- **[`emdash-plugin-sandboxed-example`](packages/emdash-plugin-sandboxed-example/README.md)** — @example/emdash-plugin-example-listing, a sandboxed emdash plugin.
+
 
 ## Requirements
 
