@@ -9,7 +9,7 @@ export function examplePlugin(
 	options: ExamplePluginOptions = {},
 ): PluginDescriptor<ExamplePluginOptions> {
 	return {
-		id: "emdash-plugin-example",
+		id: "emdash-plugin-native-example",
 		version: "0.1.0",
 		format: "native",
 		entrypoint: "@example/emdash-plugin-example",
@@ -19,7 +19,7 @@ export function examplePlugin(
 
 export function createPlugin(options: ExamplePluginOptions = {}) {
 	return definePlugin({
-		id: "emdash-plugin-example",
+		id: "emdash-plugin-native-example",
 		version: "0.1.0",
 		capabilities: ["content:read"],
 		hooks: {

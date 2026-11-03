@@ -1,7 +1,7 @@
 {
 	"$schema": "./node_modules/@emdash-cms/plugin-cli/schemas/emdash-plugin.schema.json",
 
-	"slug": "emdash-plugin-example",
+	"slug": "emdash-plugin-sandboxed-example",
 	"publisher": "did:plc:nfm27pwymsd5ntjlsaz3ivli",
 
 	"name": "Sandboxed Plugin Example",
@@ -25,6 +25,10 @@
 		"artifacts": {},
 	},
 	"admin": {
-		"pages": [],
-	},
+		"pages": [{
+				"path": "/settings",
+				"label": "Sandboxed Example",
+				"icon": "image"
+			}]
+	}
 }
