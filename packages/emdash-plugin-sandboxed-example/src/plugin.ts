@@ -1,5 +1,7 @@
 import type { SandboxedPlugin } from "emdash/plugin";
-
+import type {
+	BlockInteraction,
+} from "@emdash-cms/blocks";
 
 /**
  * Sandboxed plugin entry. The default export is a bare object; the
@@ -10,7 +12,20 @@ import type { SandboxedPlugin } from "emdash/plugin";
 const sandboxedPlugin: SandboxedPlugin = {
 	routes: {
 		admin: {
-			handler: async (ctx) => {},
+			handler: async (routeCtx, ctx) => {
+        const interaction = routeCtx.input as BlockInteraction;
+
+				if (interaction.type === "page_load") {
+					return { blocks: 
+						[
+							{
+								type: "section",
+								text: "Example sandboxed plugin. Modify plugin.ts",
+							}
+						]
+					}
+				}
+			},
 		},
 	},
 };

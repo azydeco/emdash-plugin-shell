@@ -25,6 +25,9 @@
 		"bundle": "emdash-plugin bundle",
 		"embed-screenshot": "node scripts/embed-screenshot.mjs"
 	},
+	"dependencies": {
+		"@emdash-cms/blocks": "^1.4.0"
+	},
 	"devDependencies": {
 		"@emdash-cms/plugin-cli": "catalog:",
 		"@types/node": "catalog:",
