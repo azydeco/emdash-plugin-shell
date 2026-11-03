@@ -18,19 +18,19 @@ Work through this list for every release. Each step is explained in more detail 
 Unless a step says otherwise, **run every command in this guide from the plugin package directory**, not from the repo root:
 
 ```bash
-cd emdash-plugin-example   # starting from the repo root
+cd packages/emdash-plugin-example   # starting from the repo root
 ```
   
-`pnpm pack` and `pnpm publish` act on the package in the current directory. From the repo root, they would pack the private workspace root (`emdash-plugin-examples`) instead of the plugin. If you'd rather stay in the repo root, give each command the package directory with `-C`:
+`pnpm pack` and `pnpm publish` act on the package in the current directory. From the repo root, they would pack the private workspace root (`emdash-plugin-shell`) instead of the plugin. If you'd rather stay in the repo root, give each command the package directory with `-C`:
 
 ```bash
-pnpm -C emdash-plugin-example pack --dry-run
-pnpm -C emdash-plugin-example publish
+pnpm -C packages/emdash-plugin-example pack --dry-run
+pnpm -C packages/emdash-plugin-example publish
 ```
 
 ## Public repository
 
-The plugin is developed under `emdash-plugin-example` in the [azydeco/emdash-plugin-shell](https://github.com/azydeco/emdash-plugin-shell) monorepo and published to npm from that directory with `pnpm publish`. The `repository.directory` field in `package.json` points npm's UI at the subfolder. There is no separate mirror repository and no CI publish workflow, so publishing is a manual step that a maintainer runs.
+The native plugin is developed under `packages/emdash-plugin-example` in the [azydeco/emdash-plugin-shell](https://github.com/azydeco/emdash-plugin-shell) monorepo and published to npm from that directory with `pnpm publish`. The `repository.directory` field in `package.json` points npm's UI at the subfolder. There is no separate mirror repository and no CI publish workflow, so publishing is a manual step that a maintainer runs.
 
 ## Packaging and publishing a release
 
@@ -83,7 +83,7 @@ Publish from an up-to-date `main` after the release PR is merged. `--no-git-chec
 
 ### Publish
 
-Run this from `emdash-plugin-example`:
+Run this from `packages/emdash-plugin-example`:
 
 ```bash
 pnpm whoami              # confirms you're logged in to npm

@@ -1,9 +1,10 @@
 import node from "@astrojs/node";
 import react from "@astrojs/react";
+import { examplePlugin } from "@example/emdash-plugin-example";
+import sandboxedPlugin from "@example/emdash-plugin-example-listing";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash, { local } from "emdash/astro";
 import { sqlite } from "emdash/db";
-import { examplePlugin } from "@example/emdash-plugin-example";
 
 export default defineConfig({
 	output: "server",
@@ -23,7 +24,7 @@ export default defineConfig({
 				baseUrl: "/_emdash/api/media/file",
 			}),
 			plugins: [examplePlugin({ logUpdates: true })],
-			sandboxed: [],
+			sandboxed: [sandboxedPlugin],
 			sandboxRunner: "@emdash-cms/sandbox-workerd/sandbox",
 		}),
 	],

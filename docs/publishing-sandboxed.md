@@ -6,7 +6,7 @@ Work through this list for every release of a sandboxed plugin. Each step is exp
 
 - [ ] The Atmosphere account exists, and `publisher` in `emdash-plugin.jsonc` is its DID (see [One-time setup](#one-time-setup)).
 - [ ] The release changes are merged to `main`, and your local `main` is checked out, clean and up to date with `origin`.
-- [ ] `version` is bumped in `emdash-plugin-example/package.json`. Published versions can't be changed, so every publish needs a new version.
+- [ ] `version` is bumped in `packages/emdash-plugin-sandboxed-example/package.json`. Published versions can't be changed, so every publish needs a new version.
 - [ ] `validate` and `bundle` pass without warnings (see [Check the bundle](#check-the-bundle)).
 - [ ] `whoami` shows the correct account as the active publisher.
 - [ ] Published with `publish`, and the labeler has approved the release (see [Publish](#publish)).
@@ -14,7 +14,7 @@ Work through this list for every release of a sandboxed plugin. Each step is exp
 
 ## Where to run the commands
 
-Change directory into the plugin package with `cd emdash-plugin-example`. All of the commands should be run from this directory.
+Change directory into the sandboxed plugin package with `cd packages/emdash-plugin-sandboxed-example`. All of the commands should be run from this directory.
 
 The `emdash-plugin` command reads `emdash-plugin.jsonc` from the current directory.
 
@@ -88,7 +88,7 @@ Until the release is approved, `info` shows only the labeler's current checks.
 
 Once the listing is live, install it from the Registry into the Test site:
 
-1. Remove `examplePlugin` from `sandboxed: []` in `emdash-site/astro.config.mjs`, so the Signpost page you check is the Registry copy, not the workspace one. Don't commit this change.
+1. Remove `sandboxedPlugin` from `sandboxed: []` in `emdash-site/astro.config.mjs`, so the Signpost page you check is the Registry copy, not the workspace one. Don't commit this change.
 2. Start the Test site and log in to the admin.
 3. Open the Registry, search for your published plugin, and choose **Install**.
 4. Open the "Plugins" page in the admin sidebar. Check that the plugin is listed and any functionality you have added is working.

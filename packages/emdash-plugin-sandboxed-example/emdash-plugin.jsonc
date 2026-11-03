@@ -1,0 +1,30 @@
+{
+	"$schema": "./node_modules/@emdash-cms/plugin-cli/schemas/emdash-plugin.schema.json",
+
+	"slug": "emdash-plugin-example",
+	"publisher": "did:plc:nfm27pwymsd5ntjlsaz3ivli",
+
+	"name": "Sandboxed Plugin Example",
+	"description": "A sandboxed plugin for EmDash.",
+	"keywords": [],
+
+	"license": "MIT",
+	"author": { "name": "Azydeco Software Ltd", "url": "https://azydeco.com" },
+	"security": { "email": "tellmemore@azydeco.com" },
+	"repo": "https://github.com/azydeco/emdash-plugin-shell",
+
+	// Trust contract — what runtime APIs the plugin asks for.
+	// Empty arrays mean no extra privileges beyond logging,
+	// KV, and route/hook registration. Changing these between
+	// releases requires a version bump because installed
+	// users have consented to the old contract.
+	"capabilities": [],
+	"allowedHosts": [],
+	"storage": {},
+	"release": {
+		"artifacts": {},
+	},
+	"admin": {
+		"pages": [],
+	},
+}

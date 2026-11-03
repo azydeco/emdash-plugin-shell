@@ -6,7 +6,7 @@ Native plugins are able to do things that sandboxed plugins cannot, such as rend
 
 ## Install
 
-The package is added as a dependency in emdash-site from the workspace.
+The package is added as a dependency in hosts/web-cloudflare from the workspace.
 
 ```json
 	"dependencies": {
