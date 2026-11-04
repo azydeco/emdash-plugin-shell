@@ -50,7 +50,7 @@ Do this if you haven't published from this machine before:
 
 ### Preview the tarball
 
-Always preview the tarball before publishing. This step never touches the registry. Run it from `emdash-plugin-example`:
+Always preview the tarball before publishing. This step never touches the registry. Run it from `emdash-plugin-native-example`:
 
 ```bash
 pnpm pack --dry-run
