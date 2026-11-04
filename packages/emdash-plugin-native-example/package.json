@@ -1,6 +1,11 @@
 {
 	"name": "@example/emdash-plugin-example",
 	"version": "0.1.0",
+	"description": "An example native plugin for EmDash to be used or referred to when developing a new plugin",
+	"keywords": [
+		"emdash",
+		"emdash-plugin"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/azydeco/emdash-plugin-shell.git",
