@@ -1,7 +1,7 @@
 {
 	"name": "emdash-plugin-shell",
 	"version": "1.0.0",
-	"description": "",
+	"description": "pnpm workspace for Azydeco EmDash example plugins",
 	"keywords": [],
 	"license": "MIT",
 	"author": "",
