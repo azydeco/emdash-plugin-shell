@@ -12,6 +12,7 @@
 		"directory": "packages/emdash-plugin-native-example"
 	},
 	"files": [
+		"CHANGELOG.md",
 		"src"
 	],
 	"type": "module",
