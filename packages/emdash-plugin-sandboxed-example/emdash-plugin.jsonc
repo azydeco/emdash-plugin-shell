@@ -24,7 +24,9 @@
 	"allowedHosts": [],
 	"storage": {},
 	"release": {
-		"artifacts": {},
+		"artifacts": {
+			"icon": { "file": "icon.png" },
+		},
 	},
 	"admin": {
 		"pages": [
