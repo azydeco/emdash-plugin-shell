@@ -12,7 +12,7 @@ export function examplePlugin(
 		id: "emdash-plugin-native-example",
 		version: "0.1.0",
 		format: "native",
-		entrypoint: "@example/emdash-plugin-example",
+		entrypoint: "@azydeco/emdash-plugin-native-example",
 		options,
 	};
 }

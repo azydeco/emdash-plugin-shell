@@ -1,4 +1,4 @@
-# @example/emdash-plugin-example
+# @azydeco/emdash-plugin-native-example
 
 A **native** [EmDash](https://github.com/emdash-cms/emdash) plugin example that can be used to develop a new plugin.
 
@@ -10,7 +10,7 @@ The package is added as a dependency in hosts/web-cloudflare from the workspace.
 
 ```json
 	"dependencies": {
-		"@example/emdash-plugin-example": "workspace:*",
+		"@azydeco/emdash-plugin-native-example": "workspace:*",
 	},
 ```
 
@@ -25,7 +25,7 @@ pnpm add <package name>
 Register it in `astro.config.mjs`, in `plugins: []` — **never** `sandboxed: []`:
 
 ```ts
-import { examplePlugin } from "@example/emdash-plugin-example";
+import { examplePlugin } from "@azydeco/emdash-plugin-native-example";
 
 export default defineConfig({
 	integrations: [

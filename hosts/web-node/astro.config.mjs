@@ -1,6 +1,6 @@
 import node from "@astrojs/node";
 import react from "@astrojs/react";
-import { examplePlugin } from "@example/emdash-plugin-example";
+import { examplePlugin } from "@azydeco/emdash-plugin-native-example";
 import sandboxedPlugin from "@example/emdash-plugin-example-listing";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash, { local } from "emdash/astro";
