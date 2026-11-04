@@ -1,7 +1,7 @@
 import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
-import { examplePlugin } from "@azydeco/emdash-plugin-native-example";
 import { d1, r2, sandbox } from "@emdash-cms/cloudflare";
+import { examplePlugin } from "@example/emdash-plugin-example";
 import sandboxedPlugin from "@example/emdash-plugin-example-listing";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash from "emdash/astro";

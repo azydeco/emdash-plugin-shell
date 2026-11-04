@@ -13,8 +13,8 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "^14.3.1",
 		"@astrojs/react": "^7.0.0",
-		"@azydeco/emdash-plugin-native-example": "workspace:*",
 		"@emdash-cms/cloudflare": "catalog:",
+		"@example/emdash-plugin-example": "workspace:*",
 		"@example/emdash-plugin-example-listing": "workspace:*",
 		"astro": "catalog:",
 		"emdash": "catalog:",
