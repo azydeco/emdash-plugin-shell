@@ -74,6 +74,12 @@ pnpm exec emdash-plugin publish
 
 Published versions can't be changed. Don't use `--allow-overwrite`: labelers may treat a changed release as a takedown event. If something is wrong with a release, bump the version and publish again.
 
+If only the name, description, keywords, sections, licence, author, security contact, icon or screenshots are changed you do not need to create a new release and can update them with the update-package command.
+
+```bash
+emdash-plugin update-package
+```
+
 ### Wait for the labeler
 
 The listing doesn't appear at [plugins.emdashcms.com](https://plugins.emdashcms.com) until the Registry's labeler approves the release. `publish` prints a command to follow the checks:
