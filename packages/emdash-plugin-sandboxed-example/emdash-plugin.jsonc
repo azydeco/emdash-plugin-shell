@@ -6,7 +6,7 @@
 
 	"name": "Sandboxed Plugin Example",
 	"description": "An example sandboxed plugin for EmDash to be used or referred to when developing a new plugin",
-	"keywords": ["sandboxed", "azydeco", "example"],
+	"keywords": ["sandboxed", "azydeco", "example", "testing"],
 	"sections": {
 		"description": { "file": "listing/description.md" },
 	},
