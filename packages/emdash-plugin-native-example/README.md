@@ -9,9 +9,9 @@ Native plugins are able to do things that sandboxed plugins cannot, such as rend
 The package is added as a dependency in hosts/web-cloudflare from the workspace.
 
 ```json
-	"dependencies": {
-		"@azydeco/emdash-plugin-native-example": "workspace:*",
-	},
+"dependencies": {
+	"@azydeco/emdash-plugin-native-example": "workspace:*",
+},
 ```
 
 If your plugin is listed on the npm registry you can add it with the command.
@@ -43,18 +43,17 @@ The code for the native plugin is defined in `src/index.ts`. It includes the plu
 Settings can be added to the native plugin by passing admin.settingsSchema into the definePlugin function.
 
 ```ts
-	return definePlugin({
-		...,
-		admin: {
-			settingsSchema: {
-				exampleName: {
-					type: "string",
-					label: "Example name",
-					description: "Example name input for native plugin settings",
-				},
+return definePlugin({
+	admin: {
+		settingsSchema: {
+			exampleName: {
+				type: "string",
+				label: "Example name",
+				description: "Example name input for native plugin settings",
 			},
 		},
-	});
+	},
+});
 ```
 
 Values from the settings can then be used in the code by getting them from the plugin context.
