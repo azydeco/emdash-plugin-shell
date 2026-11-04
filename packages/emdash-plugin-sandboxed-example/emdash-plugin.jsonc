@@ -6,7 +6,7 @@
 
 	"name": "Sandboxed Plugin Example",
 	"description": "A sandboxed plugin for EmDash.",
-	"keywords": [],
+	"keywords": ["sandboxed", "azydeco", "example"],
 
 	"license": "MIT",
 	"author": { "name": "Azydeco Software Ltd", "url": "https://azydeco.com" },
