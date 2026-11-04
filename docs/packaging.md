@@ -65,8 +65,8 @@ To inspect the exact file list and the resolved manifest:
 ```bash
 pnpm pack --dry-run --json                  # file list, machine-readable; writes nothing
 pnpm pack --pack-destination /tmp           # writes the real .tgz outside the repo
-tar -xOzf /tmp/emdash-plugin-example-<version>.tgz package/package.json
-rm /tmp/emdash-plugin-example-<version>.tgz
+tar -xOzf /tmp/azydeco-emdash-plugin-native-example-<version>.tgz package/package.json
+rm /tmp/azydeco-emdash-plugin-native-example-<version>.tgz
 ```
 
 Without `--pack-destination`, `pnpm pack` writes the `.tgz` into the package directory. Delete it so it doesn't end up in a commit.
