@@ -13,8 +13,8 @@
 	"dependencies": {
 		"@astrojs/node": "^11.1.5",
 		"@astrojs/react": "^7.0.0",
+		"@azydeco/emdash-plugin-native-example": "workspace:*",
 		"@emdash-cms/sandbox-workerd": "catalog:",
-		"@example/emdash-plugin-example": "workspace:*",
 		"@example/emdash-plugin-example-listing": "workspace:*",
 		"astro": "catalog:",
 		"emdash": "catalog:",
