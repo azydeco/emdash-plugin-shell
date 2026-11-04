@@ -5,7 +5,7 @@
 	"publisher": "did:plc:nfm27pwymsd5ntjlsaz3ivli",
 
 	"name": "Sandboxed Plugin Example",
-	"description": "A sandboxed plugin for EmDash.",
+	"description": "An example sandboxed plugin for EmDash to be used or referred to when developing a new plugin",
 	"keywords": ["sandboxed", "azydeco", "example"],
 
 	"license": "MIT",
