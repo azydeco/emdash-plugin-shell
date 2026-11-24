@@ -10,7 +10,7 @@ export function examplePlugin(
 ): PluginDescriptor<ExamplePluginOptions> {
 	return {
 		id: "emdash-plugin-native-example",
-		version: "0.1.0",
+		version: "0.1.1",
 		format: "native",
 		entrypoint: "@azydeco/emdash-plugin-native-example",
 		options,
@@ -20,7 +20,7 @@ export function examplePlugin(
 export function createPlugin(options: ExamplePluginOptions = {}) {
 	return definePlugin({
 		id: "emdash-plugin-native-example",
-		version: "0.1.0",
+		version: "0.1.1",
 		capabilities: ["content:read"],
 		hooks: {
 			"content:afterSave": async (event, ctx) => {
